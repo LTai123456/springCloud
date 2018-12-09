@@ -10,3 +10,5 @@ spring:
   application:
     #当前应用名称
     name: service-hi
+
+  

@@ -3,8 +3,10 @@ package com.example.demo;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,7 +22,8 @@ import lombok.Data;
 
 @RestController
 @RequestMapping("/hello")
-@Data
+
+@RefreshScope
 public class HelloController {
     private final Logger logger = Logger.getLogger(getClass());
 
@@ -32,7 +35,7 @@ public class HelloController {
         @SuppressWarnings("deprecation")
 		ServiceInstance instance = client.getLocalServiceInstance();
         logger.info("/hello, host:" + instance.getHost() + ", service_id:" + instance.getServiceId());
-        return "Hello World";
+        return "Hello World"+"xxx";  
     }
     @GetMapping("/page")
     public String getPage(@RequestParam(value="sb",required=false) Integer sb) {
