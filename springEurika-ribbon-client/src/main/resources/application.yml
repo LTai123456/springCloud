@@ -1,12 +1,12 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7788/eureka/
+      defaultZone:  http://peer1:8000/eureka/,http://peer2:8001/eureka/,http://peer3:8002/eureka/
   instance:
     appname: ribbon-client
 
 server:
-  port: 8766
+  port: 8082
 
 spring:
   application:

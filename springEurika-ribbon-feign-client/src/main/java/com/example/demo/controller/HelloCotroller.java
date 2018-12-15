@@ -17,7 +17,7 @@ public class HelloCotroller {
     @Autowired
     HelloService helloService;
  
-    @RequestMapping(value = "/customer")
+    @RequestMapping(value = "/  ")
     public String helloCustomer() {
        
         return helloService.hello();

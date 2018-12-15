@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=F\:\\springCloud\\.git;
-GitRepositoriesView.GitDirectories.relative=.git;
+GitRepositoriesView.GitDirectories=F\:\\springcloud-example\\.git;F\:\\springCloud\\.git;
+GitRepositoriesView.GitDirectories.relative=F\:\\springcloud-example\\.git;.git;
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1

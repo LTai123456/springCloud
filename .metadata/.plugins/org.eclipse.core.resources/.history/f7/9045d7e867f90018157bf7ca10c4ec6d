@@ -1,9 +1,0 @@
-package com.example.demo;
-
-@ApiModel
-public class UserBean {
-    @ApiModelProperty("用户名称")
-    private String userName;
-    @ApiModelProperty("用户年龄")
-    private Integer age;
-}

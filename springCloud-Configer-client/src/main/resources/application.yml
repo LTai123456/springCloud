@@ -2,5 +2,5 @@ eureka:
   client:
     serviceUrl:
       #注册中心的地址
-      defaultZone: http://localhost:7788/eureka/
+      defaultZone:  http://peer1:8000/eureka/,http://peer2:8001/eureka/,http://peer3:8002/eureka/
   
