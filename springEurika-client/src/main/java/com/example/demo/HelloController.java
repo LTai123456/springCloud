@@ -3,13 +3,11 @@ package com.example.demo;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -17,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
-import lombok.Data;
 
 
 @RestController
@@ -45,7 +42,8 @@ public class HelloController {
     @GetMapping(value = "/user",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public Response<UserBean> queryUser(@ApiParam(name = "id",required = true,value = "用户ID") @RequestParam(value = "id")Integer userId){
         Response<UserBean> response = new Response<>();
-        
+        UserBean yserBean=new UserBean();
+        yserBean.getAge();
         return response;
     }
     

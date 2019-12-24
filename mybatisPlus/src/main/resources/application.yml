@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatisdb?&serverTimezone=UTC
+    username: root
+    password: root
+server:  port: 9999

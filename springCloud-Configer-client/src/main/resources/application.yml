@@ -3,4 +3,8 @@ eureka:
     serviceUrl:
       #注册中心的地址
       defaultZone:  http://peer1:8000/eureka/,http://peer2:8001/eureka/,http://peer3:8002/eureka/
-  
+spring:
+  cloud:
+    bus:
+      trace:
+        enabled: true
